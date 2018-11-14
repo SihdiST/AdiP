@@ -66,10 +66,10 @@ void aufgabe3(){
     case 1:
             printf("ein-und-");
             break;
-	case 2:
+    case 2:
             printf("zwei-und-");
             break;
-	case 3:
+    case 3:
             printf("drei-und-");
             break;
     case 4:
