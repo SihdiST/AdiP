@@ -33,7 +33,7 @@ int mult(int x, int y){
 	else if(y == 0)
 		return 0;
 	else
-		return add(x,mult(x, y > 0 ? pre(y): succ(y)));
+		return x + mult(x, pre(y)); // + statt add() fukntioniert
 }
 
 int main(void){
