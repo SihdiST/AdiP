@@ -117,5 +117,36 @@ void aufgabe3(){
             printf("ERROR");
             return;
             break;
-    }
+    }	
+}
+
+int Aufgabe_4(){
+	float x[5] = { 10000.0f , -0.001f / 9.0f , 2500.0f , 0.001f / 7.0 , -12500.0f };
+	double y[5] = { 10000.0 , -0.001 / 9.0 , 2500.0 , 0.001 / 7.0 , -12500.0 };
+	float f_summe = x[0] + x[1] + x[2] + x[3] + x[4];
+	//Output: 0.000000
+	printf("Float Summe: %f\n", f_summe);
+	double d_summe = y[0] + y[1] + y[2] + y[3] + y[4];
+	//Output: 0.000032
+	printf("Double Summe %f\n", d_summe);
+	float s = 0.0, sAlt = 0.0, d = 0.0f;
+	for (unsigned int i = 0; i < 5; i++)
+	{
+		sAlt = s;
+		s += x[i];
+		d += (x[i] - (s - sAlt));
+		s += d;
+	}
+	//Output: 0.000032
+	printf("s = %f\n", s);
+	double s2 = 0.0f, sAlt2 = 0.0f, d2 = 0.0f;
+	for (unsigned int i = 0; i < 5; i++)
+	{
+		sAlt2 = s2;
+		s2 += y[i];
+		d2 += (y[i] - (s2 - sAlt2));
+		s2 += d2;
+	}
+	//Output: 0.000032
+	printf("s2 = %f", s2);	
 }
