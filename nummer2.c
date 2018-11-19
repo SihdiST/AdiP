@@ -12,8 +12,10 @@ int pre(int x) {
 int add(int x, int y){
 	if( y == 0)
 		return x;
-	else
+	else if(y > 0)
 		return add(succ(x), pre(y));
+	else
+		return add(pre(x), succ(y));
 }
 
 int sub(int x, int y){
