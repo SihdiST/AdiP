@@ -46,6 +46,6 @@ int main(void){
 		printf("\n sub von -3 und 2: %i", sub(-3, 2));
 
 		printf("\n mult von 2 und 0: %i", mult(2, 0));
-		printf("\n mutl von -3 und 2: %i", mult(-3, 2));
+		printf("\n mult von -3 und 2: %i", mult(-3, 2));
 
 }
