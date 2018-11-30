@@ -21,6 +21,8 @@ int add(int x, int y){
 int sub(int x, int y){
 	if(y == 0)
 		return x;
+	else(y < 0)
+		return sub(succ(x), succ(y));
 	else
 		return sub(pre(x), pre(y));
 }
