@@ -1,64 +1,41 @@
 #include <stdio.h>
-#include "aufgabe1.h"
-#include "aufgabe2.h"
+#include <math.h>
+#include "Aufgabe1.h"
+#include "Aufgabe2.h"
+#include "Aufgabe3.h"
+#include "Aufgabe4.h"
 
-int main(void) {
-    char test_a1_1_1[100] = "Hallo";
-    char test_a1_1_2[100] = "lagerregal";
-    char test_a1_2_1[100];
-    char test_a1_2_2[100];
-    int k;
-    DynArray *test_a2_1;
-    DynArrayMin *test_a2_2;
+int main() {
+    int test_matrix1[2][3] = {{0, 1, 2}, {3, 4, 5}};
+    int test_matrix2[3][2] = {{6, 7}, {9, 11}, {12, 13}};
 
-    //a1 1
-    reverse_string(test_a1_1_1);
-    printf("%s\n", test_a1_1_1);
-    printf("%i\n", palindrome_check(test_a1_1_2));
+    //matrix_mult(2, 3, test_matrix1, 3, 2, test_matrix2);
 
-    //a1 2
-    printf("\nBitte geben Sie ein Wort ein, das ROT13 verschlüsselt werden soll: ");
-    scanf(" %s", test_a1_2_1);
-    printf("\nverschlüsselt: %s\n", encrypt_rot13(test_a1_2_1));
-    printf("entschlüsselt: %s\n\n", decrypt_rot13(test_a1_2_1));
 
-    printf("Bitte geben Sie ein Wort ein, das verschlüsselt werden soll: ");
-    scanf(" %s", test_a1_2_2);
-    printf("\nBitte geben Sie ein, um wie viel die Buchstaben rotiert werden sollen: ");
-    scanf(" %i",&k);
-    printf("\nverschlüsselt: %s", encrypt(test_a1_2_2, k));
-    printf("\nentschlüsselt: %s", decrypt(test_a1_2_2, k));
+    //noten_berechnung();
 
-    //a2_1
-    test_a2_1 = init_dynArray(1);
-    test_a2_1 = dyn_array_add(test_a2_1, 7);
-    print_DynArray(test_a2_1);
-    printf("\n");
-    test_a2_1 = dyn_array_add(test_a2_1, 8);
-    test_a2_1 = dyn_array_add(test_a2_1, 8);
-    test_a2_1 = dyn_array_add(test_a2_1, 8);
+/*
+    student* array_stud[20] = {NULL};
 
-    print_DynArray(test_a2_1);
-    printf("\n\n");
 
-    /* der zweite ansatz bietet generell bessere speicherperformance ist aber langsamer,
- * da für jedes neue Element der Speicherplatz erweitert werden
- * muss, besonders bei größeren Mengen an Eingaben ist die erste weitaus
- * schneller, da hier nicht so oft der Speicher erweitert werden muss,
- * kann aber unnötig viel speicherplatz verbrauchen, wenn der verdoppelte Platz nicht
-     * aufgefüllt wird*/
+    add_student(array_stud, 42, "Peter", "Johanns");
+    get_name(42, array_stud);
 
-    //a2_2
-    test_a2_2 = init_dynArrayMin(1);
-    test_a2_2 = dyn_array_min_add(test_a2_2, 1);
-    print_DynArrayMin(test_a2_2);
-    printf("\n");
+    add_student(array_stud, 30, "Claude", "Jordan");
 
-    test_a2_2 = dyn_array_min_add(test_a2_2, 8);
-    test_a2_2 = dyn_array_min_add(test_a2_2, 8);
+    get_name(30, array_stud);
 
-    print_DynArrayMin(test_a2_2);
-    printf("\n\n");
+    remove_student(array_stud, 42);
+    print_students(array_stud);
+
+    clear_students(array_stud);
+    print_students(array_stud);
+
+*/
+    printf("\nIntegral von Sinus [0, pi]: %f\n", integrate(&sin, 0, M_PI, 0.0001)); //2
+    printf("Integral von Sinus [0, 2pi]: %f\n", integrate(&sin, 0, 2*M_PI, 0.0001)); //0
+    printf("Integral von f(x)=0.4x^5+x^3 [0, 3]: %f\n", integrate(&f, 0, 3, 0.0001)); //ca. 68,84
+
 
     return 0;
 }

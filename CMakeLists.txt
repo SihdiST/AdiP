@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(Uebung5 C)
+project(Uebung6 C)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 
-add_executable(Uebung5 main.c aufgabe1.c aufgabe1.h aufgabe2.c aufgabe2.h)
+add_executable(Uebung6 main.c Aufgabe1.c Aufgabe1.h Aufgabe2.c Aufgabe2.h Aufgabe3.c Aufgabe3.h Aufgabe4.c Aufgabe4.h)
